@@ -11,24 +11,9 @@ package serietemplate;
  */
 
 ///generar seie 1+100+1000
-public class GenerarSerieB {
-     public String generarSerie (int n){
-        String s = "";
-        int acumulador = 0 ;
-        for (int index = 1 ; index<n; index++){
-            acumulador = siguienteSerie(index);
-            s = s + Integer.toString(acumulador) + " , ";
-        }
-        return s ;
-    }
-
-    private int siguienteSerie(int index) {
-       
-        return index * 10 ; 
-    }
-    public static void main (String[]args) {
-        GenerarSerieB s = new GenerarSerieB();
-        String r = s.generarSerie(5);
-        System.out.println(r);
+public class GenerarSerieB extends TemplateMethod{
+     @Override
+    protected int calcularTermino(int i) {
+        return (int) Math.pow(10, i - 1);
     }
 }
