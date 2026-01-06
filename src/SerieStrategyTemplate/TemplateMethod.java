@@ -12,24 +12,15 @@ package SerieStrategyTemplate;
  * @author valde
  */
 public abstract class TemplateMethod {
-        ///metodo plantilla , operacion primitiva (se utiliza la funcion primitva dentro del metodo plantilla)
-     // Método template - define el algoritmo general
-    public final String generateSerie(int n) {
-        StringBuilder result = new StringBuilder();
-        int accumulator = 0;
-        
+       // Método plantilla (no se puede sobrescribir)
+    public final String generarSerie(int n) {
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= n; i++) {
-            accumulator = next(accumulator, i);
-            result.append(accumulator);
-            if (i < n) {
-                result.append(", ");
-            }
+            sb.append(calcularElemento(i)).append(" ");
         }
-        
-        return result.toString();
+        return sb.toString().trim();
     }
     
-    // Método abstracto 
-    protected abstract int next(int accumulator, int index);
+    // Método abstracto: cada subclase define cómo calcular el elemento
+    protected abstract int calcularElemento(int posicion);
 }
-

@@ -10,9 +10,8 @@ package SerieStrategyTemplate;
  * @author valde
  */
 public class SerieB extends TemplateMethod {
-    
-    @Override
-    protected int next(int accumulator, int index) {
-        return accumulator + (index * 2);
+ @Override
+    protected int calcularElemento(int posicion) {
+        return posicion * posicion; // Serie: 1, 4, 9, 16, 25...
     }
 }

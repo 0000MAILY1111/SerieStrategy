@@ -12,7 +12,7 @@ package SerieStrategyTemplate;
 public class SerieA extends TemplateMethod {
     
     @Override
-    protected int next(int accumulator, int index) {
-        return accumulator + index;
+    protected int calcularElemento(int posicion) {
+        return posicion; // Serie: 1, 2, 3, 4, 5...
     }
 }

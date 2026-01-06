@@ -11,22 +11,12 @@ package SerieStrategyTemplate;
  */
 public class ContextStrategy {
     private TemplateMethod strategy;
-    
-    public String generateSerie(int n) {
-        if (strategy == null) {
-            throw new IllegalStateException("No se ha establecido ninguna estrategia");
-        }
-        return strategy.generateSerie(n);
-    }
-    
+
     public void setStrategy(TemplateMethod strategy) {
         this.strategy = strategy;
     }
-    
-    public TemplateMethod getStrategy() {
-        return strategy;
-    }  
 
-    
-    
+    public String generarSerie(int n) {
+        return strategy.generarSerie(n);
+    }
 }
