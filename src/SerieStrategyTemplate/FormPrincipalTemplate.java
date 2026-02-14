@@ -22,10 +22,6 @@ public class FormPrincipalTemplate extends javax.swing.JFrame {
     }
 
     public String generarSerie(int n , String strategy ){
-        ///llamamos al patron de diseño 
-        //int n = 0 ;
-     //   String strategy = " ";
-        //algotimo asignamos o seteamos la contexto de lo qeu se va aplicar 
         switch (strategy){
             case "Serie A":
                 context.setStrategy(new SerieA());

@@ -10,7 +10,6 @@ package serietemplate;
  * @author valde
  */
 public abstract class TemplateMethod {
-        ///metodo plantilla , operacion primitiva (se utiliza la funcion primitva dentro del metodo plantilla)
     public final String generarSerie(int n) {
         StringBuilder s = new StringBuilder(); 
         for (int index = 1; index <= n; index++) { 
